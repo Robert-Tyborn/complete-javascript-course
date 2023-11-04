@@ -189,11 +189,150 @@
 //     console.log("not adult")
 // }
 
-let favorite = prompt("Enter your favorite number!");
-console.log(Number(favorite));
+// let favorite = Number(prompt("Enter your favorite number!"));
+// console.log(Number(favorite));
 
-console.log(typeof favorite);
+// console.log(typeof favorite);
 
-if (favorite == 23) {
-    console.log("cool 23 is amaxing")
-}
+// if (favorite === 23) {
+//     console.log("cool 23 is amaxing")
+// } else if (favorite === 7) {
+//     console.log("number 7 is also cool")
+// } else {
+//     console.log(favorite + " is not number 23 or 7")
+// }
+
+// if (favorite !== 19) {
+//     console.log("blblba")
+// }
+// const hasDriversLicense = true; // A
+// const hasGoodVision = true; // B
+// console.log(hasDriversLicense && hasGoodVision)
+// console.log(hasDriversLicense || hasGoodVision)
+// console.log(!hasDriversLicense && hasGoodVision)
+
+
+// if (hasDriversLicense && hasGoodVision) {
+//     console.log("she can drive")
+// } else {
+//     console.log("someone else should drive")
+// }
+
+// const isTired = true; 
+// console.log(hasDriversLicense && hasGoodVision && isTired)
+
+// if (hasDriversLicense && hasGoodVision && !isTired) {
+//     console.log("she can drive")
+// } else {
+//     console.log("someone else should drive")
+// }
+
+
+/*
+There are two gymnastics teams, Dolphins and Koalas. They compete against each
+other 3 times. The winner with the highest average score wins a trophy!
+Your tasks:
+1. Calculate the average score for each team, using the test data below
+2. Compare the team's average scores to determine the winner of the competition,
+and print it to the console. Don't forget that there can be a draw, so test for that
+as well (draw means they have the same average score)
+3. Bonus 1: Include a requirement for a minimum score of 100. With this rule, a
+team only wins if it has a higher score than the other team, and the same time a
+score of at least 100 points. Hint: Use a logical operator to test for minimum
+score, as well as multiple else-if blocks �
+4. Bonus 2: Minimum score also applies to a draw! So a draw only happens when
+both teams have the same score and both have a score greater or equal 100
+points. Otherwise, no team wins the trophy
+Test data:
+§ Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
+§ Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
+§ Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106 */
+
+// let scoreDolphins = (96 + 102) / 3
+// let scoreKoalas = (88 + 58 + 122) / 3
+// console.log(scoreDolphins, scoreKoalas)
+// if (scoreDolphins > scoreKoalas && scoreDolphins >= 100){
+//     console.log("Dolphins win the trophy")
+// } else if (scoreKoalas > scoreDolphins && scoreKoalas >= 100) {
+//     console.log("Koalas win the trophy")
+// } else if (scoreDolphins === scoreKoalas && scoreDolphins >= 100 && scoreKoalas >= 100) {
+//     console.log("Both win the trophy")
+// } else {
+//     console.log("No one wins")
+// }
+
+// const day = 'sunday';
+
+// switch(day) {
+//     case 'monday':
+//         console.log('Plan course')
+//         console.log("go to meeting")
+//         break;
+//     case 'tuesday':
+//         console.log("dinner with mom")
+//         break;
+//     case 'wednesday':
+//     case 'thursday':
+//         console.log('make video')
+//         break;
+//     case 'friday':
+//     case 'saturday':
+//         console.log("weekend is free")
+//         break;
+//         default:
+//             console.log("not a valid day")
+// }
+
+// if(day === 'monday'){
+//     console.log('Plan course')
+//     console.log("go to meeting")
+// } else if (day === 'tuesday') {
+//     console.log("dinner with mom")
+// } else if (day === 'wednesday' || day === 'thursday') {
+//     console.log('make video')
+// } else if (day === 'friday') {
+//     console.log('make many things')
+// } else if (day === 'saturday' || day === 'sunday') {
+//     console.log("weekend is free")
+// } else {
+//     console.log("not a valid day")
+// }
+// const age = 18;
+// const drink = age >= 18 ? 'wine' : 'water';
+// console.log(drink) // = wine
+
+// let drink2;
+// if (age >= 18) {
+//     drink2 = "wine";
+// } else {
+//     drink2 = "water"
+// }
+
+// Steven wants to build a very simple tip calculator for whenever he goes eating in a
+// restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and
+// 300. If the value is different, the tip is 20%.
+// Your tasks:
+// 1. Calculate the tip, depending on the bill value. Create a variable called 'tip' for
+// this. It's not allowed to use an if/else statement � (If it's easier for you, you can
+// start with an if/else statement, and then try to convert it to a ternary
+// operator!)
+// 2. Print a string to the console containing the bill value, the tip, and the final value
+// (bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value
+// 316.25”
+// Test data:
+// § Data 1: Test for bill values 275, 40 and 430
+// Hints:
+// § To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+// § Value X is between 50 and 300, if it's >= 50 && <= 300 �
+
+const bill = 275;
+console.log("The bill is " + bill + "kr")
+let tipPercent = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+console.log(tipPercent)
+
+let totalPrice = tipPercent + bill;
+console.log("the total is " + " = " + totalPrice)
+
+
+
+console.log("The bill was " + bill + "kr, the tip " + tipPercent + "kr and the total price is " + totalPrice + "kr.")
